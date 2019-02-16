@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "express example 2019"
+  contact:
+    email: "piisuke2@gmail.com"
+  license:
+    name: "MIT"
+    url: "https://github.com/piisuke2/express-example-2019/blob/master/LICENSE"
+host: "localhost:3000"
+basePath: "/api"
+tags:
+  - name: "Sample"
+schemes:
+  - "http"
+paths:
+  /hello:
+    get:
+      tags:
+        - "Sample"
+      summary: "Hello World!"
+      operationId: "getHello"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "name"
+          in: "query"
+          description: "Your name"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+            required:
+              - "message"
+            properties:
+              message:
+                type: "string"
+                example: "Hello piisuke2!"
+        400:
+          description: "Invalid status value"
