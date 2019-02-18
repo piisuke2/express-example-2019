@@ -24,6 +24,7 @@
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.0",
     "@types/jest": "^24.0.5",
+    "@types/shelljs": "^0.8.3",
     "@types/supertest": "^2.0.7",
     "delay": "^4.1.0",
     "jest": "^23.6.0",
@@ -57,6 +58,6 @@
       "ts"
     ],
     "testEnvironment": "node",
-    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.ts"
+    "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js"
   }
 }

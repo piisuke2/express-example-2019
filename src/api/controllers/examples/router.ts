@@ -5,3 +5,4 @@ export default express
   .post('/', controller.create)
   .get('/', controller.all)
   .get('/:id', controller.byId)
+  .get('/throw/error', controller.error)

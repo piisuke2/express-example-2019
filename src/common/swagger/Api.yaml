@@ -6,7 +6,7 @@ info:
 basePath: /api/v1
 tags:
   - name: Examples
-    description: Simple example endpoints
+    description: Sample example endpoints
   - name: Specification
     description: The swagger API specification
 
@@ -65,6 +65,17 @@ paths:
           description: Return the example with the specified id
         404:
           description: Example not found
+
+  /examples/throw/error:
+    get:
+      tags:
+        - Examples
+      description: Throw Error
+      responses:
+        200:
+          description: Return normal
+        500:
+          description: Return error
 
   /spec:
     get:

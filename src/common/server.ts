@@ -13,7 +13,12 @@ export default class ExpressServer {
     const root = path.normalize(__dirname + '/../..')
     this.app.set('appPath', root + 'client')
     this.app.use(bodyParser.json({ limit: process.env.REQUEST_LIMIT || '100kb' }))
-    this.app.use(bodyParser.urlencoded({ extended: true, limit: process.env.REQUEST_LIMIT || '100kb' }))
+    this.app.use(
+      bodyParser.urlencoded({
+        extended: true,
+        limit: process.env.REQUEST_LIMIT || '100kb'
+      })
+    )
     this.app.use(cookieParser(process.env.SESSION_SECRET))
     this.app.use(express.static(`${root}/public`))
   }

@@ -21,5 +21,9 @@ export class Controller {
         .json(r)
     )
   }
+
+  error(req: Request, res: Response): void {
+    throw new Error('error test')
+  }
 }
 export default new Controller()
