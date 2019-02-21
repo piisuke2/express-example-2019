@@ -1,6 +1,6 @@
 import request from 'supertest'
-import app from '../../../../../src/app'
 import delay from 'delay'
+import app from '@src/app'
 
 describe('Examples', () => {
   beforeAll(async () => {

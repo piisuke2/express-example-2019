@@ -1,7 +1,7 @@
-import ExamplesService from '../../services/examples.service'
 import { Request, Response } from 'express'
+import ExamplesService from '@src/api/services/ExamplesService'
 
-export class Controller {
+export class ExampleController {
   all(req: Request, res: Response): void {
     ExamplesService.all().then(r => res.json(r))
   }
@@ -26,4 +26,4 @@ export class Controller {
     throw new Error('error test')
   }
 }
-export default new Controller()
+export default new ExampleController()

@@ -1,12 +1,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2018",
     "module": "commonjs",
     "esModuleInterop": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"]
+    },
     "typeRoots": ["node_modules/@types"],
     "strictNullChecks": true
   },
