@@ -1,5 +1,5 @@
 import { Application } from 'express'
-import ExampleController from '@src/api/controllers/ExampleController'
+import ExampleController from '@api/controllers/ExampleController'
 
 export default function routes(app: Application): void {
   app.post('/api/v1/examples', ExampleController.create)

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import ExamplesService from '@src/api/services/ExamplesService'
+import ExamplesService from '@api/services/ExamplesService'
 
 export class ExampleController {
   all(req: Request, res: Response): void {
@@ -26,4 +26,5 @@ export class ExampleController {
     throw new Error('error test')
   }
 }
+
 export default new ExampleController()

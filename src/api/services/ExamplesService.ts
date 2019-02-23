@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import log from '@src/common/logger'
+import log from '@utils/logger'
 
 let id = 0
 interface Example {
